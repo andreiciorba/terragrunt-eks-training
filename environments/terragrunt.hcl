@@ -4,9 +4,9 @@ generate "backend" {
   contents  = <<EOF
 terraform {
     backend "s3" {
-        bucket  = "terraform-statefiles-aws-vpc"
+        bucket  = "statestorageekstf"
         key     = "${path_relative_to_include()}/terraform.tfstate"
-        region  = "us-east-1"
+        region  = "eu-west-3"
         encrypt = true
     }
 }
